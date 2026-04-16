@@ -14,7 +14,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             TicTacToeTheme {
-                //Canvis desde la segona branca
+                // Canvis desde la segona branca
                 // Carrega el sistema de navegació entre pantalles
                 AppNavigation()
             }
