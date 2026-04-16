@@ -14,7 +14,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             TicTacToeTheme {
-                //Això és una prova per a DMIC desde local
+                //Canvis desde la segona branca
                 // Carrega el sistema de navegació entre pantalles
                 AppNavigation()
             }
