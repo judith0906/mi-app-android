@@ -1,0 +1,40 @@
+name: Android CI
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Echo inicio
+        run: echo ":) Inici del pipeline"
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Permisos Gradle
+        run: chmod +x gradlew
+
+      - name: Echo antes de build
+        run: echo ":P Executant build..."
+
+      - name: Build
+        run: ./gradlew build
+
+      - name: Echo antes de test
+        run: echo ":0 Executant tests..."
+
+      - name: Test
+        run: ./gradlew test
+
+      - name: Echo final
+        run: echo "Pipeline finalizat :)"
