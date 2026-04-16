@@ -3,5 +3,5 @@ fun esMayorEdad(edad: Int): Boolean {
 }
 
 fun suma(a: Int, b: Int): Int {
-    return a + b
+    return a - b
 }
